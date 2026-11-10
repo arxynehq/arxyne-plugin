@@ -1,0 +1,17 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "arxyne",
+  "version": "1.0.0",
+  "description": "Run engineering simulations and read their results, from the Arxyne CLI on this machine.",
+  "author": {
+    "name": "Arxyne Ltd",
+    "url": "https://arxyne.com"
+  },
+  "homepage": "https://docs.arxyne.com",
+  "license": "BUSL-1.1",
+  "extensions": {
+    "com.openai": {
+      "requires_local_executor": true
+    }
+  }
+}

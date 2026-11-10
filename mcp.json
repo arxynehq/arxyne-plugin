@@ -1,0 +1,10 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "arxyne": {
+      "type": "stdio",
+      "command": "arxyne",
+      "args": ["mcp", "stdio"]
+    }
+  }
+}
