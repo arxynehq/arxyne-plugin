@@ -5,12 +5,12 @@ description: Run an engineering simulation and read its result with the Arxyne C
 
 # Arxyne
 
-Arxyne runs a simulation on this machine and keeps a record of it. The tools
+Arxyne runs a simulation locally and keeps a record of it. The tools
 come from the local `arxyne` MCP server.
 
 ## Find out what can run
 
-1. Call `list_solvers` to see the solvers this machine can dispatch, with the
+1. Call `list_solvers` to see the solvers this install can dispatch, with the
    domains they cover and the products each one declares.
 2. Call `list_products` to see the products, and which solvers can run each.
 

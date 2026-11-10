@@ -37,7 +37,7 @@ you want to change:
 - "Which solvers can I use?"
 - "Read back the results of my last run."
 
-Claude calls the `arxyne` MCP server on this machine. It can list solvers and
+Claude calls your local `arxyne` MCP server. It can list solvers and
 products, dispatch a run, and read results and provenance. Runs execute locally
 in Docker and are stored under `~/.arxyne/`. Nothing is sent to Arxyne: there is
 no Arxyne account, no API key, and no service to reach.

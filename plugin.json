@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "arxyne",
   "version": "1.0.0",
-  "description": "Run engineering simulations and read their results, from the Arxyne CLI on this machine.",
+  "description": "Run engineering simulations and read their results, through your local Arxyne CLI.",
   "author": {
     "name": "Arxyne Ltd",
     "url": "https://arxyne.com"

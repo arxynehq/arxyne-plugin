@@ -12,7 +12,7 @@
     {
       "name": "arxyne",
       "source": "./",
-      "description": "Run engineering simulations and read their results, from the Arxyne CLI on this machine.",
+      "description": "Run engineering simulations and read their results, through your local Arxyne CLI.",
       "version": "1.0.0",
       "license": "BUSL-1.1",
       "keywords": ["simulation", "cfd", "fea", "engineering"]
