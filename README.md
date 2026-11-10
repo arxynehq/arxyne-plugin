@@ -44,6 +44,12 @@ no Arxyne account, no API key, and no service to reach.
 
 Full documentation: <https://docs.arxyne.com>
 
+## Checks
+
+A daily workflow (`check.yml`) validates the manifest and runs a live
+handshake against the latest `arxyne` on PyPI, so a CLI change that breaks
+the plugin's tools is caught here before it reaches a customer.
+
 ## Data
 
 The plugin sends nothing off your machine. Tool calls go to a local process

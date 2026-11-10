@@ -28,8 +28,8 @@ time.
 
 ## Read a past run
 
-Call `get_results` for the product to get the recorded KPIs and provenance for
-each run. Quote the values as recorded. Do not recompute, round differently, or
+Call `get_product_results` for the product to get the recorded KPIs and
+provenance for each run. Quote the values as recorded. Do not recompute, round differently, or
 describe a value the record does not carry.
 
 ## Say what happened
