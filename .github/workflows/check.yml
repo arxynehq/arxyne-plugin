@@ -29,3 +29,13 @@ jobs:
           python-version: "3.13"
       - run: pip install arxyne
       - run: python scripts/check_mcp.py
+
+  skill:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install -g clawhub
+      - run: python3 scripts/check_skill_sync.py

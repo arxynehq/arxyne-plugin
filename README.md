@@ -17,6 +17,13 @@ In Claude Code:
 /plugin install arxyne --marketplace arxynehq/arxyne-plugin
 ```
 
+In OpenClaw the same bundle installs unchanged:
+
+```
+openclaw plugins marketplace list arxynehq/arxyne-plugin
+openclaw plugins install arxyne --marketplace arxynehq/arxyne-plugin --accept-capabilities
+```
+
 Then install the CLI, which the plugin calls. It is a separate install:
 
 ```bash
@@ -37,7 +44,7 @@ you want to change:
 - "Which solvers can I use?"
 - "Read back the results of my last run."
 
-Claude calls your local `arxyne` MCP server. It can list solvers and
+Your agent calls your local `arxyne` MCP server. It can list solvers and
 products, dispatch a run, and read results and provenance. Runs execute locally
 in Docker and are stored under `~/.arxyne/`. Nothing is sent to Arxyne: there is
 no Arxyne account, no API key, and no service to reach.
@@ -46,9 +53,15 @@ Full documentation: <https://docs.arxyne.com>
 
 ## Checks
 
-A daily workflow (`check.yml`) validates the manifest and runs a live
-handshake against the latest `arxyne` on PyPI, so a CLI change that breaks
-the plugin's tools is caught here before it reaches a customer.
+A daily workflow (`check.yml`) validates the manifest, runs a live handshake
+against the latest `arxyne` on PyPI, and compares the bundled skill with the
+published one on ClawHub. A CLI change that breaks the plugin's tools, or a
+skill that has drifted from what ClawHub serves, is caught here before it
+reaches a customer.
+
+`skills/arxyne/SKILL.md` is a copy of the published skill, not a second draft.
+Change the skill on ClawHub, then copy it here; `scripts/check_skill_sync.py`
+fails when the two differ.
 
 ## Data
 
