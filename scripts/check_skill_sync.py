@@ -18,6 +18,11 @@ import subprocess
 import sys
 from pathlib import Path
 
+try:
+    import yaml
+except ModuleNotFoundError:  # the frontmatter check needs it; the byte check does not
+    yaml = None
+
 PUBLISHED = "@arxyne/arxyne"
 LOCAL = Path("skills/arxyne/SKILL.md")
 
@@ -41,6 +46,26 @@ def main() -> int:
 
     here = LOCAL.read_text(encoding="utf-8")
     there = fetched.stdout
+
+    # A description with an unquoted colon is not valid YAML. ClawHub then cannot
+    # parse the manifest, and its page and scan fall back to the previous parse,
+    # so the page keeps showing the old text. This is the check for that.
+    if yaml is None:
+        print("FAIL: pyyaml is not installed; pip install pyyaml")
+        return 1
+    front = here.split("---", 2)
+    if len(front) < 3:
+        print("FAIL: no frontmatter block")
+        return 1
+    try:
+        meta = yaml.safe_load(front[1])
+    except yaml.YAMLError as exc:
+        print("FAIL: the frontmatter is not valid YAML, so ClawHub cannot read it")
+        print(str(exc)[:400])
+        return 1
+    if not isinstance(meta, dict) or not meta.get("name") or not meta.get("description"):
+        print("FAIL: the frontmatter needs a name and a description")
+        return 1
     if here == there:
         print(f"PASS: {LOCAL} is the published {PUBLISHED} skill, byte for byte")
         return 0

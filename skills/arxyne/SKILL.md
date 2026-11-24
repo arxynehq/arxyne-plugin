@@ -1,6 +1,6 @@
 ---
 name: arxyne
-description: Run engineering simulations on your own machine, and read each result with its provenance: aerodynamics, vehicle dynamics, structures, thermal, acoustics, crash and electromagnetics. It lists the solvers and products this machine can run, records each case, reads past results back, and registers a solver image you built. Use when a CFD, structural, crash, thermal, acoustic or electromagnetic case is asked for, or when the numbers and provenance of a past run are needed.
+description: Run engineering simulations on your own machine and read each result with its provenance, across aerodynamics, vehicle dynamics, structures, thermal, acoustics, crash and electromagnetics. It lists the solvers and products this machine can run, records each case, reads past results back, and registers a solver image you built. Use when a CFD, structural, crash, thermal, acoustic or electromagnetic case is asked for, or when the numbers and provenance of a past run are needed.
 ---
 
 # Arxyne

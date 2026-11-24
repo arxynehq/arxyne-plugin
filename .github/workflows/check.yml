@@ -38,4 +38,5 @@ jobs:
         with:
           node-version: 22
       - run: npm install -g clawhub
+      - run: pip install pyyaml
       - run: python3 scripts/check_skill_sync.py
