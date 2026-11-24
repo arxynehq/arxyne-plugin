@@ -17,7 +17,11 @@ In Claude Code:
 /plugin install arxyne --marketplace arxynehq/arxyne-plugin
 ```
 
-In OpenClaw the same bundle installs unchanged:
+In OpenClaw the same bundle installs unchanged, either from ClawHub or from this repository:
+
+```
+openclaw plugins install clawhub:arxyne
+```
 
 ```
 openclaw plugins marketplace list arxynehq/arxyne-plugin
