@@ -47,15 +47,9 @@ The same work, either way:
 
 ## Before the first run
 
-1. Install the CLI if `arxyne` is missing. On Linux or macOS the one-line installer does the
-   Python, pipx, Docker and PATH work for you:
-
-   ```bash
-   curl -fsSL https://arxyne.com/install.sh | bash
-   ```
-
-   Or install it directly: `pipx install arxyne` on Linux or macOS, `pip install arxyne` on
-   Windows. Keep it current with `pipx upgrade arxyne`.
+1. Install the CLI if `arxyne` is missing: `pipx install arxyne` on Linux or macOS, `pip install
+   arxyne` on Windows. Keep it current with `pipx upgrade arxyne`. Show the install guide at
+   https://docs.arxyne.com/getting-started/installation/ when the user wants the other options.
 2. What the install cannot supply: Python 3.11+, and Docker 24+ installed and running (Docker
    Desktop on macOS and Windows). An NVIDIA GPU is needed only by the GPU solvers, XLB and
    DoMINO.
