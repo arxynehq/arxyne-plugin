@@ -14,9 +14,11 @@ Look for `list_solvers` and `simulate` in your tool list before anything else.
 
 **If they are there**, use them as this file describes.
 
-**If they are not**, the CLI is installed but its server is not registered with this client. That
-is a setup gap, not a broken install. Say so once, then carry on with the CLI, which reaches the
-same server and prints the same answers. Do not retry the tools, and do not tell the user that
+**If they are not**, check the CLI first: `arxyne --version`. If that fails, Arxyne is not on this
+machine — install it (below) and do not describe it as a registration problem. If the command
+works, the CLI is installed but its server is not registered with this client. That is a setup
+gap, not a broken install. Say so once, then carry on with the CLI, which reaches the same
+server and prints the same answers. Do not retry the tools, and do not tell the user that
 Arxyne is missing.
 
 Registering the server is a choice of two transports:
@@ -50,9 +52,9 @@ The same work, either way:
 1. Install the CLI if `arxyne` is missing: `pipx install arxyne` on Linux or macOS, `pip install
    arxyne` on Windows. Keep it current with `pipx upgrade arxyne`. Show the install guide at
    https://docs.arxyne.com/getting-started/installation/ when the user wants the other options.
-2. What the install cannot supply: Python 3.11+, and Docker 24+ installed and running (Docker
-   Desktop on macOS and Windows). An NVIDIA GPU is needed only by the GPU solvers, XLB and
-   DoMINO.
+2. What the install cannot supply: Python 3.11 to 3.14, since the wheels stop there, and Docker
+   24+ installed and running (Docker Desktop on macOS and Windows). An NVIDIA GPU is needed only
+   by the GPU solvers, XLB and DoMINO.
 3. Run `arxyne doctor`. It checks Python, Docker, GPU, the solver images and the workspace.
    Report what it says. If Docker is missing or not running, stop there: nothing else works.
 4. `arxyne onboard` walks the same checks, pulls images, and starts the MCP server, if the user

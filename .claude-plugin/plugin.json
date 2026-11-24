@@ -1,7 +1,7 @@
 {
   "name": "arxyne",
   "displayName": "Arxyne",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Run engineering simulations and read their results, through your local Arxyne CLI.",
   "author": {
     "name": "Arxyne Ltd",
